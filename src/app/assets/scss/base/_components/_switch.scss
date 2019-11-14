@@ -1,0 +1,114 @@
+
+
+
+@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+    .switch,
+    .switch-check {
+        width: 95px;
+        height: 25px;
+        border-radius: 100vh;
+        outline: none;
+        position: relative;
+        @include  noapearance;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        cursor: pointer;           
+        @include linear-gradient(to left, $color-verde-claro2 -50%, $color-verde 150%);
+        transition: background .3s ease, border-color .3s ease;
+        &:after,
+        &:before {
+            content:'€';
+            left: 0px;
+            top: 0px;
+            border-radius: 100vh;
+            width: 50px;
+            height: 25px;
+            font-size: 0.8rem;
+            text-align: center;
+            display: block;
+            top: 0;
+            position: absolute;
+            line-height: 1.8;
+            font-weight: 600;
+            color:$color-blanco;
+        }
+        &:after{
+            background: $color-blanco;
+            @include boxshadow(0px 2px 20px $color-verde-claro);
+            color:$color-gris;
+            transition: transform .3s ease, opacity .2s ease, filter .3s ease;
+            left: 0;
+        }
+        &:before{
+            content:'kWh';
+            transform: translateX(45px);
+        }
+        &:checked, &.checked {
+            &:after {
+                transform: translateX(45px);
+                content:'kWh';
+            }
+            &:before{
+                content:'€';
+                color:$color-blanco;
+                transform: translateX(0px);
+            }
+        }
+    }
+}
+
+/*SIN ELEMENTO INPUT*/
+.switch-check {
+    width: 95px;
+    height: 25px;
+    border-radius: 100vh;
+    outline: none;
+    position: relative;
+    @include  noapearance;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    cursor: pointer;           
+    @include linear-gradient(to left, $color-verde-claro2 -50%, $color-verde 150%);
+    transition: background .3s ease, border-color .3s ease;
+    &:after,
+    &:before {
+        content:'€';
+        left: 0px;
+        top: 0px;
+        border-radius: 100vh;
+        width: 50px;
+        height: 25px;
+        font-size: 0.7rem;
+        text-align: center;
+        display: block;
+        top: 0;
+        position: absolute;
+        line-height: 2.4;
+        font-weight: 600;
+        color:$color-blanco;
+    }
+    &:after{
+        background: $color-blanco;
+        @include boxshadow(0px 2px 20px $color-verde-claro);
+        color:$color-gris;
+        transition: transform .3s ease, opacity .2s ease, filter .3s ease;
+        left: 0;
+    }
+    &:before{
+        content:'kWh';
+        transform: translateX(45px);
+    }
+    &.checked {
+        &:after {
+            transform: translateX(45px);
+            content:'kWh';
+        }
+        &:before{
+            content:'€';
+            color:$color-blanco;
+            transform: translateX(0px);
+        }
+    }
+}

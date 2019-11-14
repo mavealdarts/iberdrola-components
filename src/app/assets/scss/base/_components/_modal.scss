@@ -1,0 +1,131 @@
+.modal{
+	&-content{
+		border:0;
+		strong, b{
+			color:$color-verde;
+			font-weight: 500;
+		}
+	}
+	.content{
+		padding: 2rem 5%;
+	}
+	.module-title-tag{
+		b,strong{
+			font-weight:600;
+		}
+	}
+	&-header{
+		position:relative;
+		.close{
+			position:absolute;
+			color:$color-verde;
+			right:5%;
+			opacity: 1;
+			cursor:pointer;
+			z-index:3;
+			&:hover, &:focus{
+				color:$color-verde-claro;
+				text-shadow: none;
+			}
+		}	
+	}
+	&-body{
+		padding:0;
+	}
+	&-footer{
+		border:0;
+		text-align: center;
+		padding:0 8% 5%;
+		display:block;
+		.modal-footer-title{margin-bottom:2rem;}
+		.btn{
+			margin: 0 auto;
+		}
+	}
+
+	.iframe{
+		iframe{
+			border: 1px solid $color-gris;
+			padding: 0.2rem;
+		}
+	}
+
+	/*Modal errores*/
+	&#modalError{
+		.modal{
+			&-content{ overflow:hidden;}
+			&-header{ border-bottom:0;}
+			&-body{
+				padding: 10%;
+			}
+			&-footer{
+				padding-bottom: 10%;
+			}
+		}
+		.module-title{
+			padding:0;
+			.close{
+				top:5%;
+				color:$color-blanco;
+				&:hover, &:focus{
+					color:$color-verde-claro;
+				}
+			}
+			figure{
+				margin-bottom:0;
+				width:100%;
+				position:relative;
+				img{
+					width:100%;
+				}
+				&:after{
+					content: '';
+				    z-index: 2;
+				    background-image: url(../../images/css/wave.png);
+				    background-repeat: no-repeat;
+				    background-size: contain;
+				    background-position: center bottom;
+				    position: absolute;
+				    top: 0;
+				    right: 0;
+				    bottom: 0;
+				    left: 0;
+				}
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(sm){
+//@media (max-width:767px){
+	.modal{
+		.module-title-tag{
+			&[class*="icon-"]{
+				&:before{
+					display: block;
+				    font-size: 3.5rem;
+				    height: 3.5rem;
+				    line-height: 1;
+				    width: 3.5rem;
+				    margin: auto;
+				}
+				&.outline{
+					&:before{
+						margin-bottom: 0.5rem;
+						font-size: 2.5rem;
+						line-height: 1.3;
+					}
+				}
+			}
+		}
+		&-footer{
+			.btn{
+				width: 100%;
+				margin-bottom:1rem;
+			}
+		}
+	}
+
+}
+
+

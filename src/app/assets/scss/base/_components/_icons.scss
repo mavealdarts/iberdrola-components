@@ -1,0 +1,576 @@
+[class*="icon-"]{
+   @include icon;
+}
+
+
+[class*="icon-after-"]{
+    position:relative;
+    padding-right:8%;
+    &:after{
+        position:absolute!important;
+        right:9%;
+        top: 50%;
+        @include transform(translate(0, -50%));
+    }
+}
+
+
+/*********************************************/
+/*********** Definición estilos **************/
+/*********************************************/
+[class*="icon-"].rounded{
+    &:before,
+    &:after{
+        -webkit-border-radius: 60rem;
+        -moz-border-radius: 60rem;
+        -ms-border-radius: 60rem;
+        border-radius: 60rem;
+        padding: .25rem;
+    }
+}
+[class*="icon-"].outline{
+    &:before,
+    &:after{
+        border: 1px solid $color-verde;
+        color: $color-verde;
+    }
+}
+
+[class*="icon-"].fill{
+    &:before,
+    &:after{
+        color: $color-blanco;
+        background-color: $color-verde;
+    }
+}
+
+[class*="icon-block"]{
+    &:before,
+    &:after{
+        display:block;
+        margin: 0 auto 0.5rem;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        width: 3rem;
+        height: 3rem;
+    }
+}
+.icon-block{
+    &-xs{
+        &:before,
+        &:after{
+            font-size: .9rem;
+            line-height: 1.2rem;
+            padding: 0!important;
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+    }
+    &-sm{
+        &:before,
+        &:after{
+            font-size: 1.2rem;
+            line-height: 1.65rem;
+            padding: 0!important;
+            width: 1.65rem;
+            height: 1.65rem;
+        }
+    }
+    &-md{
+        &:before,
+        &:after{
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+            padding: 0!important;
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+    }
+    &-lg{
+        &:before,
+        &:after{
+            font-size: 2.5rem;
+            line-height: 3rem;
+            padding: 0!important;
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+    &-xl{
+        &:before,
+        &:after{
+            font-size: 5rem;
+            line-height: 6rem;
+            padding: 0!important;
+            width: 6rem;
+            height: 6rem;
+        }
+        &.outline{
+            &:before,
+            &:after{
+                border-width: 2px;
+            }
+        }
+    }
+}
+
+
+
+/********************************************
+            Definición icono 
+/*********************************************/
+
+[class*="icon-before-none"]:before,
+[class*="icon-after-none"]:after{
+    content: "__";
+    color: transparent !important;
+}
+[class*="icon-before-light"]:before,
+[class*="icon-after-light"]:after{
+    content: "\E900";
+}
+[class*="icon-before-gas"]:before,
+[class*="icon-after-gas"]:after{
+    content: "\E901";
+}
+[class*="icon-before-services"]:before,
+[class*="icon-after-services"]:after{
+    content: "\E902";
+}
+[class*="icon-before-light_off"]:before,
+[class*="icon-after-light_off"]:after{
+    content: "\E903";
+}
+[class*="icon-before-gas_off"]:before,
+[class*="icon-after-gas_off"]:after{
+    content: "\E904";
+}
+[class*="icon-before-services_off"]:before,
+[class*="icon-after-services_off"]:after{
+    content: "\E905";
+}
+[class*="icon-before-info"]:before,
+[class*="icon-after-info"]:after{
+    content: "\E906";
+}
+[class*="icon-before-question"]:before,
+[class*="icon-after-question"]:after{
+    content: "\E907";
+}
+[class*="icon-before-arrow_up"]:before,
+[class*="icon-after-arrow_up"]:after{
+    content: "\E908";
+}
+[class*="icon-before-arrow_down"]:before,
+[class*="icon-after-arrow_down"]:after{
+    content: "\E909";
+}
+[class*="icon-before-arrow_left"]:before,
+[class*="icon-after-arrow_left"]:after{
+    content: "\E90A";
+}
+[class*="icon-before-arrow_right"]:before,
+[class*="icon-after-arrow_right"]:after{
+    content: "\E90B";
+}
+[class*="icon-before-warning"]:before,
+[class*="icon-after-warning"]:after{
+    content: "\E90C";
+}
+[class*="icon-before-add"]:before,
+[class*="icon-after-add"]:after{
+    content: "\E90D";
+}
+[class*="icon-before-more"]:before,
+[class*="icon-after-more"]:after{
+    content: "\E90D";//repetido
+}
+[class*="icon-before-order"]:before,
+[class*="icon-after-order"]:after{
+    content: "\E90E";
+}
+[class*="icon-before-caret_up"]:before,
+[class*="icon-after-caret_up"]:after{
+    content: "\E90F";
+}
+[class*="icon-before-order_asc"]:before,
+[class*="icon-after-order_asc"]:after{
+    content: "\E90F";//repetido
+}
+[class*="icon-before-caret_right"]:before,
+[class*="icon-after-caret_right"]:after{
+    content:  "\E910";
+}
+[class*="icon-before-caret_down"]:before,
+[class*="icon-after-caret_down"]:after{
+    content: "\E911";
+}
+[class*="icon-before-caret_desc"]:before,
+[class*="icon-after-caret_desc"]:after{
+    content: "\E911";//repetido
+}
+[class*="icon-before-caret_left"]:before,
+[class*="icon-after-caret_left"]:after{
+    content: "\E912";
+}
+[class*="icon-before-sync"]:before,
+[class*="icon-after-sync"]:after{
+    content: "\E913";
+}
+[class*="icon-before-sync_o"]:before,
+[class*="icon-after-sync_o"]:after{
+    content: "\E914";
+}
+[class*="icon-before-wait"]:before,
+[class*="icon-after-wait"]:after{
+    content: "\E915";
+}
+[class*="icon-before-request"]:before,
+[class*="icon-after-request"]:after{
+    content: "\E915";//repetido
+}
+[class*="icon-before-close"]:before,
+[class*="icon-after-close"]:after{
+    content: "\E916";
+}
+[class*="icon-before-delete"]:before,
+[class*="icon-after-delete"]:after{
+    content: "\E916";//repetido
+}
+[class*="icon-before-success"]:before,
+[class*="icon-after-success"]:after{
+    content: "\E917";
+}
+[class*="icon-before-check"]:before,
+[class*="icon-after-check"]:after{
+    content: "\E917";//repetido
+}
+[class*="icon-before-search"]:before,
+[class*="icon-after-search"]:after{
+    content: "\E918";
+}
+[class*="icon-before-edit"]:before,
+[class*="icon-after-edit"]:after{
+    content: "\E919";
+}
+[class*="icon-before-trash"]:before,
+[class*="icon-after-trash"]:after{
+    content: "\E91A";
+}
+[class*="icon-before-save"]:before,
+[class*="icon-after-save"]:after{
+    content: "\E91B";
+}
+[class*="icon-before-logout"]:before,
+[class*="icon-after-logout"]:after{
+    content: "\E91C";
+}
+[class*="icon-before-billing_view"]:before,
+[class*="icon-after-billing_view"]:after{
+    content: "\E91D";
+}
+[class*="icon-before-consumption"]:before,
+[class*="icon-after-consumption"]:after{
+    content: "\E91E";
+}
+[class*="icon-before-billing_download"]:before,
+[class*="icon-after-billing_download"]:after{
+    content: "\E91F";
+}
+[class*="icon-before-file_request"]:before,
+[class*="icon-after-file_request"]:after{
+    content: "\E920";
+}
+[class*="icon-before-file_upload"]:before,
+[class*="icon-after-file_upload"]:after{
+    content: "\E921";
+}
+[class*="icon-before-file_download"]:before,
+[class*="icon-after-file_download"]:after{
+    content: "\E964";//repetido???
+}
+[class*="icon-before-home"]:before,
+[class*="icon-after-home"]:after{
+    content: "\E922";
+}
+[class*="icon-before-steps"]:before,
+[class*="icon-after-steps"]:after{
+    content: "\E923";
+}
+[class*="icon-before-calendar"]:before,
+[class*="icon-after-calendar"]:after{
+    content: "\E924";
+}
+[class*="icon-before-address"]:before,
+[class*="icon-after-address"]:after{
+    content: "\E925"
+}
+[class*="icon-before-calculator"]:before,
+[class*="icon-after-calculator"]:after{
+    content: "\E926"
+}
+[class*="icon-before-rate"]:before,
+[class*="icon-after-rate"]:after{
+    content: "\E926"//repetido
+}
+[class*="icon-before-period"]:before,
+[class*="icon-after-period"]:after{
+    content: "\E927"
+}
+[class*="icon-before-logout_o"]:before,
+[class*="icon-after-logout_o"]:after{
+    content: "\E928"
+}
+[class*="icon-before-user_card"]:before,
+[class*="icon-after-user_card"]:after{
+    content: "\E929"
+}
+[class*="icon-before-time"]:before,
+[class*="icon-after-time"]:after{
+    content: "\E92A"
+}
+[class*="icon-before-clock"]:before,
+[class*="icon-after-clock"]:after{
+    content: "\E92A"//repetido
+}
+[class*="icon-before-power"]:before,
+[class*="icon-after-power"]:after{
+    content: "\E92B"
+}
+[class*="icon-before-pin"]:before,
+[class*="icon-after-pin"]:after{
+    content: "\E92C"
+}
+[class*="icon-before-consumption_evolution"]:before,
+[class*="icon-after-consumption_evolution"]:after{
+    content: "\E92D"
+}
+[class*="icon-before-user"]:before,
+[class*="icon-after-user"]:after{
+    content: "\E92E"
+}
+[class*="icon-before-view_engagement"]:before,
+[class*="icon-after-view_engagement"]:after{
+    content: "\E92F"
+}
+[class*="icon-before-view_billing"]:before,
+[class*="icon-after-view_billing"]:after{
+    content: "\E930"
+}
+[class*="icon-before-view_suscription"]:before,
+[class*="icon-after-view_suscription"]:after{
+    content: "\E931"
+}
+[class*="icon-before-view_suscription_history"]:before,
+[class*="icon-after-view_suscription_history"]:after{
+    content: "\E932"
+}
+[class*="icon-before-view_power_history"]:before,
+[class*="icon-after-view_power_history"]:after{
+    content: "\E933"
+}
+[class*="icon-before-view_request"]:before,
+[class*="icon-after-view_request"]:after{
+    content: "\E934"
+}
+[class*="icon-before-view_billing_estimate"]:before,
+[class*="icon-after-view_billing_estimate"]:after{
+    content: "\E935"
+}
+[class*="icon-before-edit_engagement_conditions"]:before,
+[class*="icon-after-edit_engagement_conditions"]:after{
+    content: "\E936"
+}
+[class*="icon-before-user_auth"]:before,
+[class*="icon-after-user_auth"]:after{
+    content: "\E937"
+}
+[class*="icon-before-view_engagement_conditions"]:before,
+[class*="icon-after-view_engagement_conditions"]:after{
+    content: "\E938"
+}
+[class*="icon-before-Fl_si_MS"]:before,
+[class*="icon-after-Fl_si_MS"]:after{
+    content: "\E939"
+}
+[class*="icon-before-FP"]:before,
+[class*="icon-after-FP"]:after{
+    content: "\E93A"
+}
+[class*="icon-before-RI"]:before,
+[class*="icon-after-RI"]:after{
+    content: "\E93B"
+}
+[class*="icon-before-Fe"]:before,
+[class*="icon-after-Fe"]:after{
+    content: "\E93C"
+}
+[class*="icon-before-REF"]:before,
+[class*="icon-after-REF"]:after{
+    content: "\E93D"
+}
+[class*="icon-before-MS"]:before,
+[class*="icon-after-MS"]:after{
+    content: "\E93E"
+}
+[class*="icon-before-Fl"]:before,
+[class*="icon-after-Fl"]:after{
+    content: "\E93F"
+}
+[class*="icon-before-Fl_no_MS"]:before,
+[class*="icon-after-Fl_no_MS"]:after{
+    content: "\E940"
+}
+[class*="icon-before-FE"]:before,
+[class*="icon-after-FE"]:after{
+    content: "\E941"
+}
+[class*="icon-before-FRE"]:before,
+[class*="icon-after-FRE"]:after{
+    content: "\E942"
+}
+[class*="icon-before-view_resume"]:before,
+[class*="icon-after-view_resume"]:after{
+    content: "\E943"
+}
+[class*="icon-before-user_view"]:before,
+[class*="icon-after-user_view"]:after{
+    content: "\E944"
+}
+[class*="icon-before-file_pdf"]:before,
+[class*="icon-after-file_pdf"]:after{
+    content: "\E945"
+}
+[class*="icon-before-file_xls"]:before,
+[class*="icon-after-file_xls"]:after{
+    content: "\E946"
+}
+[class*="icon-before-engagement_ref"]:before,
+[class*="icon-after-engagement_ref"]:after{
+    content: "\E947"
+}
+[class*="icon-before-billing_last"]:before,
+[class*="icon-after-billing_last"]:after{
+    content: "\E948"
+}
+[class*="icon-before-engagement_list"]:before,
+[class*="icon-after-engagement_list"]:after{
+    content: "\E949"
+}
+[class*="icon-before-menu"]:before,
+[class*="icon-after-menu"]:after{
+    content: "\E94A"
+}
+[class*="icon-before-bars"]:before,
+[class*="icon-after-bars"]:after{
+    content: "\E94A"//repetido
+}
+[class*="icon-before-danger"]:before,
+[class*="icon-after-danger"]:after{
+    content: "\E94B"
+}
+[class*="icon-before-danger_o"]:before,
+[class*="icon-after-danger_o"]:after{
+    content: "\E94C"
+}
+[class*="icon-before-card"]:before,
+[class*="icon-after-card"]:after{
+    content: "\E94D"
+}
+[class*="icon-before-print"]:before,
+[class*="icon-after-print"]:after{
+    content: "\E94E"
+}
+[class*="icon-before-phone"]:before,
+[class*="icon-after-phone"]:after{
+    content: "\E94F"
+}
+[class*="icon-before-options"]:before,
+[class*="icon-after-options"]:after{
+    content: "\E950"
+}
+[class*="icon-before-billings"]:before,
+[class*="icon-after-billings"]:after{
+    content: "\E951"
+}
+[class*="icon-before-notification"]:before,
+[class*="icon-after-notification"]:after{
+    content: "\E952"
+}
+[class*="icon-before-pointer"]:before,
+[class*="icon-after-pointer"]:after{
+    content: "\E953"
+}
+[class*="icon-before-FF_special"]:before,
+[class*="icon-after-FF_special"]:after{
+    content: "\E954"
+}
+[class*="icon-before-FF_plus"]:before,
+[class*="icon-after-FF_plus"]:after{
+    content: "\E955"
+}
+[class*="icon-before-facebook"]:before,
+[class*="icon-after-facebook"]:after{
+    content: "\E956"
+}
+[class*="icon-before-twitter"]:before,
+[class*="icon-after-twitter"]:after{
+    content: "\E957"
+}
+[class*="icon-before-cart"]:before,
+[class*="icon-after-cart"]:after{
+    content: "\E958"
+}
+[class*="icon-before-settings"]:before,
+[class*="icon-after-settings"]:after{
+    content: "\E959"
+}
+[class*="icon-before-coorp"]:before,
+[class*="icon-after-coorp"]:after{
+    content: "\E95A"
+}
+[class*="icon-before-saving"]:before,
+[class*="icon-after-saving"]:after{
+    content: "\E95B"
+}
+[class*="icon-before-mail"]:before,
+[class*="icon-after-mail"]:after{
+    content: "\E95C"
+}
+[class*="icon-before-replacement"]:before,
+[class*="icon-after-replacement"]:after{
+    content: "\E95D"
+}
+[class*="icon-before-legal"]:before,
+[class*="icon-after-legal"]:after{
+    content: "\E95E"
+}
+[class*="icon-before-euro"]:before,
+[class*="icon-after-euro"]:after{
+    content: "\E95F"
+}
+[class*="icon-before-electricity"]:before,
+[class*="icon-after-electricity"]:after{
+    content: "\E960"
+}
+[class*="icon-before-eco"]:before,
+[class*="icon-after-eco"]:after{
+    content: "\E961"
+}
+[class*="icon-before-alert"]:before,
+[class*="icon-after-alert"]:after{
+    content: "\E962"
+}
+[class*="icon-before-compass"]:before,
+[class*="icon-after-compass"]:after{
+    content: "\E963"
+}
+[class*="icon-before-error404"]:before,
+[class*="icon-after-error404"]:after{
+    content: "\E965"
+}
+
+[class*="icon-before-home_o"]:before,
+[class*="icon-after-home_o"]:after{
+    content: "\E966"
+}

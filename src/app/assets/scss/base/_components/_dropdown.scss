@@ -1,0 +1,120 @@
+.dropdown-toggle{
+    position:relative;
+    margin-bottom:0;
+    &:after{
+        border-top: 0.4rem solid;
+        border-right: 0.4rem solid transparent;
+        border-bottom: 0;
+        border-left: 0.4rem solid transparent;
+        position: absolute;
+        right: 0.6rem;
+        top: calc(50% - 0.2rem);
+        color:$color-verde;
+    }
+    &[aria-expanded="true"]{
+        &:after{
+            border-bottom: 0.4rem solid;
+            border-right: 0.4rem solid transparent;
+            border-top: 0;
+            border-left: 0.4rem solid transparent;
+        }
+    }
+}
+.input-group{
+    .dropdown-menu{
+        left: -40px!important;
+    }
+}
+.dropdown-menu{
+    @include border-radius(1rem);
+    @include boxshadow($shadow-generic);
+    border:0;
+    padding:1rem 2rem;
+    min-width:100%;
+    margin-top: 0.5rem;
+    overflow: auto;
+    // scrollbar-visibility: hidden;
+    // overflow-style: none;
+    &::-webkit-scrollbar { 
+        display: none;
+    }
+    &::-webkit-scrollbar { 
+      width: 0;
+      height: 0;
+    }
+    li{
+        .dropdown-item{
+            font-size: 0.8rem;
+            padding:1rem 1rem 1rem 2rem;
+            border-top:1px solid $color-gris-claro;
+            color:$color-gris;
+            &:before{
+                font-size: 1.5rem;
+                vertical-align: middle;
+                color:$color-gris;
+                position:absolute;
+                left:0;
+            }
+            &:hover,
+            &:focus{
+                background-color:transparent;
+                color:$color-gris-oscuro;
+                &:before{
+                    color:$color-gris-oscuro;
+                }
+            }
+        }
+        &:last-child{
+            .dropdown-item{
+                border-bottom:1px solid $color-gris-claro;
+            }
+        }
+        &.active{
+            .dropdown-item{
+                color:$color-verde;
+                &:before{
+                    color:$color-verde;
+                }
+                &:hover, 
+                &:focus{
+                    color:$color-verde;
+                    &:before{
+                        color:$color-verde;
+                    }                    
+                }
+            }
+        }
+    }
+}
+#dropdownMenuContrat{
+    max-height: 5rem;
+}
+#dropdownMenuPeriode{
+    max-height: 13rem;
+    li{
+        &.active{
+            .dropdown-item{
+                color:$color-verde;
+                @include icon;
+                &:before{
+                    content:'\E917';
+                    color:$color-verde;
+                }
+            }
+        }       
+    }
+}
+/*DROPDOWN SELECT CON INPUT*/
+// .dropdown-select{
+//     position:relative;
+//     span[class*="icon-after"]{
+//         position:absolute;
+//         right:0.5rem;
+//         top: calc(50% - 0.8rem);
+//         padding-right:0;
+//         cursor:pointer;
+//         &:after{
+//             color:$color-verde;
+//         }
+//     }
+// }

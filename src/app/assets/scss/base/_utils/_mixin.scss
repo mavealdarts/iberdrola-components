@@ -1,0 +1,206 @@
+//GENERALES
+@mixin flexbox{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+@mixin wrap($value:wrap){
+  -webkit-flex-wrap: $value;
+  -moz-flex-wrap: $value;
+  @if $value == nowrap {
+    -ms-flex-wrap: none;
+  } @else { 
+    -ms-flex-wrap: $value; 
+  }
+  flex-wrap: $value;
+}
+@mixin flex-flow($values: (row nowrap)){
+  -webkit-flex-flow: $values;
+  -moz-flex-flow: $values;
+  -ms-flex-flow: $values;
+  flex-flow: $values;
+}
+@mixin order($value: 0) {
+  -webkit-box-ordinal-group: $value + 1;
+  -webkit-order: $value;
+  -moz-order: $value;
+  -ms-flex-order: $value;
+  order: $value;
+}
+@mixin flex-grow($value: 0) {
+  -webkit-box-flex: $value;
+  -webkit-flex-grow: $value;
+  -moz-flex-grow: $value;
+  -ms-flex-positive: $value;
+  flex-grow: $value;
+}
+@mixin clearfix{
+	&:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+@mixin noapearance{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+@mixin white-space($value){
+  white-space: -moz-#{$value};
+  white-space: $value;
+}
+@mixin linear-gradient($args...){
+  background: -o-linear-gradient($args); 
+  background: -moz-linear-gradient($args); 
+  background: -webkit-linear-gradient($args); 
+  background: linear-gradient($args); 
+}
+
+
+@mixin transform($transforms...){
+  -webkit-transform: $transforms;
+  -moz-transform: $transforms;
+  -ms-transform: $transforms;
+  -o-transform: $transforms;
+  transform: $transforms;
+}
+@mixin transform-origin ($origin) {
+      moz-transform-origin: $origin;
+       -o-transform-origin: $origin;
+      -ms-transform-origin: $origin;
+  -webkit-transform-origin: $origin;
+          transform-origin: $origin;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+@mixin boxshadow($shadow: $shadow-generic) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+@mixin border-radius($value){
+ -webkit-border-radius: $value;
+    -moz-border-radius: $value;
+    -ms-border-radius: $value;
+    border-radius: $value;
+}
+
+//BOTONES
+@mixin btn-color($clr:$color-verde, $border:$clr, $hover:$clr, $icon:$clr){
+  &[class*="btn-outline"]{
+    color: $clr;
+    border-color: $border;
+    &:before,
+    &:after{
+      color: $icon;
+    }
+    &:not(.disabled):hover,
+    &:not(.disabled):focus,
+    &:not(.disabled):active{
+      background-color: $hover;
+      border-color: transparent;
+      @if $clr == $color-blanco{
+        color: $color-gris-verdoso;
+        &:before,
+        &:after{
+          color: $color-verde-claro;
+        }
+      }
+      @else{
+        color: $color-blanco;
+        &:before,
+        &:after{
+          color: $color-blanco;
+        }
+      }
+    }
+  }
+  //solido
+  &:not([class*="btn-outline"]){
+    background-color: $clr;
+    border-color: transparent;
+    @if $clr == $color-blanco{
+      color: $color-verde;
+      &:before,
+      &:after{
+        color: $color-verde;
+      }
+    }
+    @else{
+      color: $color-blanco;
+      &:before,
+      &:after{
+        color: $color-blanco;
+      }
+    }
+    &:not(.disabled):hover,
+    &:not(.disabled):focus,
+    &:not(.disabled):active{
+      @if $hover == $clr{
+        background-color: darken($clr, 12%);
+      }
+      @else{
+        background-color: $hover;
+      }
+    }
+  }
+}
+
+
+//ICONOS
+@mixin icon-color($clr:$color-gris, $border:$clr){
+  &:before,
+  &:after{
+    color: $clr;
+    border-color: $border;
+  }
+  &.fill{
+    &:before,
+    &:after{
+      @if $clr == $color-blanco{
+        color: $color-verde;
+      }
+      @else{
+        color: $color-blanco;
+      }
+      background-color: $clr;
+    }
+  }
+  &.outline{
+    &:before,
+    &:after{
+      color: $clr;
+      border-color: $border;
+    }
+  }
+}
+
+@mixin icon{
+  position: relative;
+  display: inline-block;
+  &:before,
+  &:after{
+      display: inline-block;
+      font-family: "Iberdrola Icons";
+      font-style: normal;
+      font-weight: normal;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      color: $color-gris;
+      vertical-align: middle;
+  }
+}

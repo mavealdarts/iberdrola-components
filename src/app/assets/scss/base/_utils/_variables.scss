@@ -1,0 +1,78 @@
+/*****************************************************
+               COLORES CORPORATIVOS
+******************************************************/
+//Se utilizarán para definir los colores en diferentes elementos
+
+/* VERDES */
+$color-verde:#5C8819;
+$color-verde-claro:#8ABD37;
+$color-verde-claro2: #95BD38;
+$color-verde-oscuro: #4c5342;
+$color-verde-oscuro2: #303923;
+$color-gris-verdoso:#4C5241;
+$color-gris-verdoso-oscuro:#2F3822;
+
+/* NARANJAS*/
+$color-naranja: #F5A623;
+$color-naranja-oscuro: #F76B1C;
+$color-naranja-claro: #F0951C;
+
+/* GRISES */
+$color-gris: #9b9b9b;
+$color-gris-oscuro: #707070;
+$color-gris-claro: #e6ebf2;
+
+/* AZULES */
+$color-azul: #52BCEC;
+$color-azul-claro: #BCCDE6;
+
+
+/* NEUTROS */
+$color-blanco:#FFFFFF;
+$color-negro:#000000;
+$color-fondo: #f9f9f9;
+
+$color-base:#f1da36;
+/*****************************************************
+                ELEMENTOS ESTRUCTURALES
+******************************************************/
+
+/* BORDERS */
+$border-generic: 1px solid $color-gris-claro;
+$border-dark: 1px solid $color-gris;
+
+/* SHADOWS */
+$shadow-generic: 0rem 0rem 1rem rgba(0, 0, 0, 0.15); //-0.0625rem, 0.4375rem, 1.75rem,  rgba(10,10,10,0.1);//-1px 7px 28px 0px rgba(0, 0, 0, 0.08);
+$shadow-generic-lg: 0rem 0rem 1.5rem rgba(0, 0, 0, 0.15);
+
+
+/*****************************************************
+*           BOTONES GENERICOS, ICONOS Y SVG
+******************************************************/
+$hover-opacity: .8;
+$background-btn-svg: transparent;
+
+
+/*****************************************************
+*           ANIMATIONS
+******************************************************/
+$transition-generic: all .5s ease-out;
+$transition-generic2: all .3s ease-in-out;
+$transition-background: background-color .3s;
+
+/*****************************************************
+*           FUENTES
+******************************************************/
+$fuenteText: "Font Main",
+Helvetica,
+Roboto,
+Arial,
+sans-serif;
+$fuenteIconos: 'Iberdrola Icons',
+sans-serif;
+
+$fuenteLight: 100;
+$fuenteRegular: 500;
+$fuenteBold: 600;
+$fuenteBlack: 800;
+

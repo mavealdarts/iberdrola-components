@@ -1,0 +1,69 @@
+#accordion{
+	.card{
+		border:0;
+		&-header{
+			background-color:$color-blanco; 
+			border-bottom: 1px solid $color-gris;
+			padding:0;
+			[class*="icon-"]{
+				&:before{font-size: 2rem;}
+			}
+			button{
+				padding:1.5rem;
+				color:$color-verde;
+				display:block;
+				width: 100%;
+				text-align:left;
+				cursor:pointer;
+				&:before{
+					color:$color-verde-claro;
+				}
+				&:after{
+					content:"\E908";
+					font-family:$fuenteIconos;
+					position:absolute;
+					right:1rem;
+					top: calc(50% - 0.8rem);
+					color:$color-verde;
+				}
+				&.btn{
+					background-color:transparent;
+					font-family: $fuenteText;
+				    font-style: normal;
+				    font-weight: $fuenteRegular;
+				    color: $color-verde;
+				    font-size: 1.25rem;
+				    line-height: 1.4;
+				    &:hover, &:focus{
+				    	text-decoration:none;
+				    }
+				}
+			}
+			/*VER FUNCIONAMIENTO EN BOOSTRAP 4*/
+		    button[aria-expanded="false"]{
+		    	&:after{
+					content:"\E909";
+				}
+		    }
+		}
+		&-body{
+			padding:0;
+		}
+		.module-data{
+			border-bottom: 0.01rem solid $color-gris;
+		}
+	}
+	/*FUNCIONAMIENTO ANGULAR BOOSTRAP 4*/
+	.panel-open{
+		button{
+			&:after{
+				content:"\E909";
+				font-family:$fuenteIconos;
+				position:absolute;
+				right:1rem;
+				top: calc(50% - 0.8rem);
+				color:$color-verde;
+			}
+		}
+	}
+}

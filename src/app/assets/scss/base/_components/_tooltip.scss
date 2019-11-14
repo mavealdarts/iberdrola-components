@@ -1,0 +1,23 @@
+.tooltip{
+    .arrow{
+        &:before{
+            border-bottom-color: $color-blanco !important;
+        }
+    }
+    &-inner{
+        display: block;
+        @include boxshadow(-.25rem -0.25rem 2rem rgba(0, 0, 0, 0.1));
+        background-color: $color-blanco;
+        border-radius: 1rem;
+        padding: 1rem;
+        font-size: .8rem;
+        a{
+            display: block;
+        }
+    }
+}
+button{
+    .tooltip{
+        display: block;
+    }
+}

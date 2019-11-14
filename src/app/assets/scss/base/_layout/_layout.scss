@@ -1,0 +1,74 @@
+* {
+    outline: none !important;
+}
+body{
+    font-family:$fuenteText;
+    @include font-size($font-size-base);
+    color:$color-gris-oscuro;
+}
+
+a {
+    line-height: inherit;
+    color: $color-verde;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover, &:focus{
+        color:$color-verde-claro;
+        text-decoration: none;
+    }
+}
+
+.main{
+	background-color: $color-fondo;
+	padding: 0 0 4.5rem 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $fuenteText;
+    font-style: normal;
+    font-weight: 100;
+    color: $color-verde;
+    text-rendering: optimizeLegibility;
+}
+h1 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    &[class*="icon-"]{
+        font-weight: bold;
+        &:before,
+        &:after{
+            font-size: 2.5rem;
+            vertical-align: middle;
+            margin-right: 1rem;
+        }
+    }
+}
+h2 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+.center{
+  text-align: center;
+}
+
+@include media-breakpoint-up(md){
+//@media print, screen and (min-width: 768px){
+	h1{
+	    font-size: 1.875rem;
+	}
+	h2 {
+	    font-size: 1.25rem;
+	}
+}
+
+@include media-breakpoint-down(md){
+//@media (max-width: 991.98px){
+    .container{
+        max-width: 100%;
+    }
+}
+
+

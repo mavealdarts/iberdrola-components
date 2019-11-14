@@ -1,0 +1,220 @@
+/*****************************************************
+                      COLORES
+******************************************************/
+.primary{        
+    &:not([class*="icon-"]){
+        color: $color-verde;
+    }
+    &[class*="icon-"]{
+        @include icon-color($color-verde);
+    }
+    &[class*="btn-"]{
+        @include btn-color($color-verde);
+    }
+    &.leyend-item{
+        &:before,
+        &:after{
+            background-color: $color-verde;
+        }
+    }
+}
+.primary-light{
+    &:not([class*="icon-"]){
+        color: $color-verde-claro;
+    }
+    &[class*="icon-"]{
+        @include icon-color($color-verde-claro);
+    }
+    &[class*="btn-"]{
+        @include btn-color($color-verde-claro);
+    }
+    &.leyend-item{
+        &:before,
+        &:after{
+            background-color: $color-verde-claro;
+        }
+    }
+}
+.white{
+    &:not([class*="icon-"]){
+        color: $color-blanco;
+    }
+    &[class*="icon-"]{
+        @include icon-color($color-blanco);
+    }
+    &[class*="btn-"]{
+        @include btn-color($color-blanco);
+    }
+    &.leyend-item{
+        &:before,
+        &:after{
+            background-color: $color-blanco;
+        }
+    }
+}
+.gray{
+    &:not([class*="icon-"]){
+        color: $color-gris;
+    }
+    &[class*="icon-"]{
+        @include icon-color($color-gris);
+    }
+    &[class*="btn-"]{
+        @include btn-color($color-gris, $color-gris-claro, $color-verde-claro, $color-verde);
+    }
+    &.leyend-item{
+        &:before,
+        &:after{
+            background-color: $color-gris;
+        }
+    }
+}
+.light-gray{
+    &:not([class*="icon-"]){
+        color: $color-gris-claro;
+    }
+    &[class*="icon-"]{
+        @include icon-color($color-gris-claro);
+    }
+    &[class*="btn-"]{
+        @include btn-color($color-gris-claro);
+    }
+    &.leyend-item{
+        &:before,
+        &:after{
+            background-color: $color-gris-claro;
+        }
+    }
+}
+.medium-gray{
+    &:not([class*="icon-"]){
+        color: $color-gris;
+    }
+    &[class*="icon-"]{
+        @include icon-color($color-gris);
+    }
+    &[class*="btn-"]{
+        @include btn-color($color-gris);
+    }
+    &.leyend-item{
+        &:before,
+        &:after{
+            background-color: $color-gris;
+        }
+    }
+}
+.dark-gray{
+    &:not([class*="icon-"]){
+        color: $color-gris-oscuro;
+    }
+    &[class*="icon-"]{
+        @include icon-color($color-gris-oscuro);
+    }
+    &[class*="btn-"]{
+        @include btn-color($color-gris-oscuro);
+    }
+    &.leyend-item{
+        &:before,
+        &:after{
+            background-color: $color-gris-oscuro;
+        }
+    }
+}
+.black{
+    &:not([class*="icon-"]){
+        color: $color-negro;
+    }
+    &[class*="icon-"]{
+        @include icon-color($color-negro);
+    }
+    &[class*="btn-"]{
+        @include btn-color($color-negro);
+    }
+    &.leyend-item{
+        &:before,
+        &:after{
+            background-color: $color-negro;
+        }
+    }
+}
+.secondary{
+    &:not([class*="icon-"]){
+        color: $color-naranja;
+    }
+    &[class*="icon-"]{
+        @include icon-color($color-naranja);
+    }
+    &[class*="btn-"]{
+        @include btn-color($color-naranja);
+    }
+    &.leyend-item{
+        &:before,
+        &:after{
+            background-color: $color-naranja;
+        }
+    }
+}
+.info{
+    &:not([class*="icon-"]){
+        color: $color-azul;
+    }
+    &[class*="icon-"]{
+        @include icon-color($color-azul);
+    }
+    &[class*="btn-"]{
+        @include btn-color($color-azul);
+    }
+    &.leyend-item{
+        &:before,
+        &:after{
+            background-color: $color-azul;
+        }
+    }
+} 
+.info-light{
+    &:not([class*="icon-"]){
+        color: $color-azul-claro;
+    }
+    &[class*="icon-"]{
+        @include icon-color($color-azul-claro);
+    }
+    &[class*="btn-"]{
+        @include btn-color($color-azul-claro);
+    }
+    &.leyend-item{
+        &:before,
+        &:after{
+            background-color: $color-azul-claro;
+        }
+    }
+} 
+.alert{
+    &:not([class*="icon-"]){
+        color: $color-naranja-oscuro;
+    }
+    &[class*="icon-"]{
+        @include icon-color($color-naranja-oscuro);
+    }
+    &[class*="btn-"]{
+        @include btn-color($color-naranja-oscuro);
+    }
+    &.leyend-item{
+        &:before,
+        &:after{
+            background-color: $color-naranja-oscuro;
+        }
+    }
+}
+
+/*****************************************************
+                      STYLE
+******************************************************/
+.bold{
+    font-weight: bold !important;
+}
+.regular{
+    font-weight: normal !important;
+}
+.light{
+    font-weight: lighter !important;
+}
