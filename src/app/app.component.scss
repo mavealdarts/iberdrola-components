@@ -1,0 +1,11 @@
+@import '../styles/variables';
+p {
+  font-family: Lato;
+  color: $test-color;
+}
+
+.green {
+  background-color:  #67af67;  
+}
+
+.green > span {color: #FFFFFF;}

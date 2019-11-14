@@ -1,0 +1,40 @@
+/* Add application styles & imports to this file! */
+@import './styles/variables';
+
+[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea, .form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 2.5rem;
+    margin: 0 0 1rem;
+    padding: .5rem;
+    border: 1px solid #e6ebf2;
+    border-radius: 62.5rem;
+    background-color: #FFFFFF;
+    box-shadow: none;
+    font-family: inherit;
+    font-size: .875rem;
+    font-weight: normal;
+    color: #9b9b9b;
+    transition: all .5s ease-out;
+    font-size: .75rem;
+    padding: .625rem 1.25rem;
+    background-color: transparent;
+    text-align: left;
+}
+
+.form-group.datepicker input:active, .form-group.datepicker input:focus, input[type='text']:focus {
+    border: 1px solid #9b9b9b;
+}
+
+[type='text']:focus {
+    border-color: #e6ebf2;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0);
+    color: #9b9b9b;
+}
